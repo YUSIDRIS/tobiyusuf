@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple .
+  - docker build -t simple --build-arg NAME=${NAME}.
   - docker tag simple yusidris/simple:latest
 
 after_success:
