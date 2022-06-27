@@ -5,7 +5,7 @@ function sleep(ms) {
 
 async function main() {
   while(true) {
-    console.log (`${FAVORITE_INSTRUCTOR} rocks!`);
+    console.log (`${favourite} rocks!`);
     await sleep(5000);
     await sleep(5000);
   }
