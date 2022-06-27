@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple --build-arg NAME=${NAME} .
-  - docker tag simple yusidris/simple:latest
+  - docker build -t final --build-arg NAME=${NAME} .
+  - docker tag final yusidris/final:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push yusidris/simple
+  - docker push yusidris/final
